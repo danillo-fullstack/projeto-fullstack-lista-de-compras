@@ -180,3 +180,14 @@ a {
     }
 }
 
+@media (max-width: 390px)  {
+    #app {
+        & .logo {
+            display: none;
+        }
+        
+        & .input-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
