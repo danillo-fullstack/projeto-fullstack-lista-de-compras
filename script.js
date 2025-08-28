@@ -3,11 +3,16 @@ const itens = document.querySelector('.itens');
 const input = document.querySelector('#item');
 
 adicionar.addEventListener('click', (event) => {
-    if (!input.checkValidity()) {
+    event.preventDefault();
+
+    if (!input.value.trim()) {
+        input.setCustomValidity('Por favor, digite o nome do item.');
+        input.reportValidity();
         return;
+    } else {
+        input.setCustomValidity('');
     }
 
-    event.preventDefault();
     addNewItem();
     clearInput();
 })
