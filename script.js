@@ -1,6 +1,10 @@
 const adicionar = document.querySelector('button');
 const itens = document.querySelector('.itens');
 const input = document.querySelector('#item');
+const menssage = document.querySelector('.alert-delete');
+const closeAlert = document.querySelector('.alert-delete > svg');
+
+let contador = 0;
 
 adicionar.addEventListener('click', (event) => {
     event.preventDefault();
@@ -18,14 +22,15 @@ adicionar.addEventListener('click', (event) => {
 })
 
 function addNewItem() {
-    
     const nameItem = input.value.trim();
     
     const li = document.createElement('li');
     li.classList.add('item')
+
+    contador++;
     li.innerHTML = `<div class="checkbox-wrapper">
-                        <input type="checkbox" name="product[]" id="product-5">
-                        <label for="product-5">${nameItem}</label>
+                        <input type="checkbox" name="product[]" id="product-${contador}">
+                        <label for="product-${contador}">${nameItem}</label>
                     </div>
                     <a href="#">
                         <img src="/assets/lixeira.svg" alt="ícone de lixeira">
@@ -36,3 +41,19 @@ function addNewItem() {
 function clearInput() {
      input.value = '';
 }
+
+itens.addEventListener('click', (e) => {
+    const link = e.target.closest('a'); 
+    const li = e.target.closest('.item'); 
+
+    if (!link || !li) {
+        return;
+    }
+
+    li.remove();
+    menssage.classList.remove('hide')
+});
+
+closeAlert.addEventListener('click', () => {
+    menssage.classList.add('hide');
+})
