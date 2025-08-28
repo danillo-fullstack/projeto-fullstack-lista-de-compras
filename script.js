@@ -3,17 +3,18 @@ const itens = document.querySelector('.itens');
 const input = document.querySelector('#item');
 
 adicionar.addEventListener('click', (event) => {
+    if (!input.checkValidity()) {
+        return;
+    }
+
+    event.preventDefault();
     addNewItem();
     clearInput();
 })
 
-function addNewItem(event) {
-    event.preventDefault();
+function addNewItem() {
+    
     const nameItem = input.value.trim();
-
-    if (!nameItem) {
-        return;
-    }
     
     const li = document.createElement('li');
     li.classList.add('item')
