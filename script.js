@@ -21,6 +21,9 @@ adicionar.addEventListener('click', (event) => {
     clearInput();
 })
 
+/**
+ * @param addNewItem um novo item na lista
+ */
 function addNewItem() {
     const nameItem = input.value.trim();
     
@@ -42,18 +45,26 @@ function clearInput() {
      input.value = '';
 }
 
-itens.addEventListener('click', (e) => {
-    const link = e.target.closest('a'); 
-    const li = e.target.closest('.item'); 
+/**
+ * @param  removeItem exclui o item da lista após clicar no icone da lixeira
+ */
+function removeItem() {
+    itens.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        const li = e.target.closest('.item');
 
-    if (!link || !li) {
-        return;
-    }
+        if (!link || !li) {
+            return;
+        }
 
-    li.remove();
-    menssage.classList.remove('hide')
-});
+        li.remove();
+        menssage.classList.remove('hide');
+    });
+}
+
+removeItem();
 
 closeAlert.addEventListener('click', () => {
     menssage.classList.add('hide');
-})
+});
+
