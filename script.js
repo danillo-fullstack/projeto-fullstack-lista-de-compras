@@ -36,7 +36,7 @@ function addNewItem() {
                         <label for="product-${contador}">${nameItem}</label>
                     </div>
                     <a href="#">
-                        <img src="/assets/lixeira.svg" alt="ícone de lixeira">
+                        <img src="./assets/lixeira.svg" alt="ícone de lixeira">
                     </a>`;
    itens.prepend(li)
 }
