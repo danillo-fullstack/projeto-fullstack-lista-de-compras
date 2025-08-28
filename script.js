@@ -3,12 +3,12 @@ const itens = document.querySelector('.itens');
 const input = document.querySelector('#item');
 
 adicionar.addEventListener('click', (event) => {
-    event.preventDefault();
     addNewItem();
     clearInput();
 })
 
-function addNewItem() {
+function addNewItem(event) {
+    event.preventDefault();
     const nameItem = input.value.trim();
 
     if (!nameItem) {
