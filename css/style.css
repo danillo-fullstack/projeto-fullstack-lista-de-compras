@@ -85,7 +85,7 @@ a {
             border: 1px solid var(--border-primary);
         }
 
-        input:focus-within {
+        & input:focus-within {
             outline: 1px solid var(--color-brand);
             color: var(--content-primary);
         }
