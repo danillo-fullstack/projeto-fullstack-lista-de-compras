@@ -10,8 +10,6 @@ O objetivo é transformar a experiência das tradicionais listas de papel em uma
   <img alt="projeto quicklist" src=".github/screen-short-quicklist.gif" width="100%">
 </p>
 
-
-
 ## 🚀 Funcionalidades
 - ✅ Adicionar novos itens à lista  
 - ✅ Marcar itens como concluídos  
@@ -30,6 +28,11 @@ O projeto foi desenvolvido com foco em **praticar manipulação do DOM com JavaS
 - **CSS3**  
 - **JavaScript (ES6+)**
 
+## 🎨 Design
+
+O layout e protótipo do projeto foram desenvolvidos no Figma.  
+Você pode conferir [clicando aqui](https://www.figma.com/community/file/1397279978314668489/lista-de-compras).
+
 ## ✨ Aprendizados
 
 Durante o desenvolvimento, foram praticados conceitos de manipulação do DOM e lógica de programação em JavaScript, especialmente:
@@ -45,6 +48,8 @@ Durante o desenvolvimento, foram praticados conceitos de manipulação do DOM e 
 2. Acesse a pasta do projeto
     ```bash
    cd nome-do-repo
+
+
 
 ## 📝 Licença
 
